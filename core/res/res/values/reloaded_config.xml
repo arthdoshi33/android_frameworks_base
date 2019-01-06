@@ -40,4 +40,7 @@
     <string-array name="config_vendorPlatformSignatures">
     </string-array>
 
+    <!-- Performance Profiles -->
+    <bool name="config_hasPerformanceProfiles">false</bool>
+
 </resources>
