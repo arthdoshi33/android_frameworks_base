@@ -4657,6 +4657,15 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Whether to hide network traffic on inactivity
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide";
+
+        private static final Validator NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4740,6 +4749,7 @@ public final class Settings {
             BACK_GESTURE_HEIGHT,
             BATTERY_LIGHT_ENABLED,
             NETWORK_TRAFFIC_STATE,
+            NETWORK_TRAFFIC_AUTOHIDE,
         };
 
         /**
@@ -4878,6 +4888,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(BACK_GESTURE_HEIGHT);
             PRIVATE_SETTINGS.add(BATTERY_LIGHT_ENABLED);
             PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_STATE);
+            PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_AUTOHIDE);
         }
 
         /**
@@ -4990,6 +5001,7 @@ public final class Settings {
             VALIDATORS.put(BACK_GESTURE_HEIGHT, BACK_GESTURE_HEIGHT_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_ENABLED, BATTERY_LIGHT_ENABLED_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_STATE, NETWORK_TRAFFIC_STATE_VALIDATOR);
+            VALIDATORS.put(NETWORK_TRAFFIC_AUTOHIDE, NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR);
         }
 
         /**
