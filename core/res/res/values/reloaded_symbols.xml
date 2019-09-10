@@ -45,4 +45,7 @@
     <!-- Performance Profiles -->
     <java-symbol type="bool" name="config_hasPerformanceProfiles" />
 
+    <!-- Post reset runnable for all clients -->
+    <java-symbol type="bool" name="config_fingerprintPostResetRunnableForAllClients" />
+
 </resources>
