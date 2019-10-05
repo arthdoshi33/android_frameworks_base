@@ -623,9 +623,10 @@ public class StatusBar extends SystemUI implements DemoMode,
         }
 
         void observe() {
-            mContext.getContentResolver().registerContentObserver(
-                    Settings.System.getUriFor(Settings.System.USE_OLD_MOBILETYPE),
-                    false, this);
+            mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.USE_OLD_MOBILETYPE), false, this);
+            mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN), false, this);
         }
 
         @Override
@@ -639,6 +640,9 @@ public class StatusBar extends SystemUI implements DemoMode,
             if(USE_OLD_MOBILETYPE != mOldMobileType){
                 USE_OLD_MOBILETYPE = mOldMobileType;
                 TelephonyIcons.updateIcons(USE_OLD_MOBILETYPE);
+            }
+            if (mNotificationPanel != null) {
+                mNotificationPanel.updateSettings();
             }
         }
     }
