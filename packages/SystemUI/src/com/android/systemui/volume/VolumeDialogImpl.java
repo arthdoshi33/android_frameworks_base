@@ -1079,7 +1079,6 @@ public class VolumeDialogImpl implements VolumeDialog,
     }
 
     private void provideTouchHapticH(VibrationEffect effect) {
-        mController.vibrate(effect);
     }
 
     private void provideSliderHapticFeedbackH() {
